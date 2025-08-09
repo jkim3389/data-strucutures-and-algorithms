@@ -1,3 +1,56 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:830560f97e39535985c64b04e993221c87e0628fed52c3a9dc4e8ce2e07bc3e4
-size 814
+def add80(n):
+  print('Long time')
+  return n+80
+
+print(add80(5))
+print(add80(5))
+
+#Memoization 1
+
+cache = {}
+
+def memoizedadd80(n):
+  if n in cache:
+    return cache[n]
+  else:
+    print('Long time')
+    cache[n] = n+80
+    return cache[n]
+
+print(memoizedadd80(6))
+print(memoizedadd80(6))
+
+#Memoization 2
+def memoizedadd80():
+  cache = {}
+
+  def memoized(n):
+	  if n in cache:
+	    return cache[n]
+	  else:
+	    print('Long time')
+	    cache[n] = n+80
+	    return cache[n]
+  return memoized
+
+memo = memoizedadd80()
+print(memo(7))
+print(memo(7))
+
+
+
+# https://docs.python.org/3.3/library/functools.html --> Doc for lru_cache
+
+from functools import lru_cache
+
+@lru_cache(maxsize = 1000)
+def memoized2add80(n):
+  return n + 80
+
+
+print(memoized2add80(8))
+print(memoized2add80(8))
+print(memoized2add80.cache_info())
+
+
+

@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:87d274f702febfb5e20bc66e590e69a496895fd9c6a43666349ccd8d18e2bc1a
-size 291
+# Implementation of Data Structures and Algorithms with Python
+
+## Overview - 
+
+### Data Structures - 
+1. Arrays
+2. Graphs
+3. Hashtables (dictionary)
+4. Linked Lists
+5. Stack and Queues
+
+### Algorithms - 
+1. Dynamic Programming
+2. Recursion
+3. Sorting
+4. Traversals
+      - BFS
+      - DFS
+

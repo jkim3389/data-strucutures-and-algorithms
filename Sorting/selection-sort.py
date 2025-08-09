@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ee245f4cd45b36df6c35d3d05cc8257a7bc6caaff033a0b8009c58e1e26c7fe1
-size 311
+def selectionsort(arr):
+  i = 0
+  while i < len(arr):
+    min = arr[i]
+    index = i
+    for j in range(i+1,len(arr)):
+      if arr[j] < min:
+        index = j
+        min = arr[j]
+    arr[i] , arr[index] = arr[index] , arr[i]
+    i += 1
+  
+  return arr
+
+arr = [8,6,5,0,4,3,2]
+print(selectionsort(arr))
+        
